@@ -2,159 +2,247 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Y Surya Teja | DevOps & Full Stack Developer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Yerraguntla Surya Teja - Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg-color: #f7f9fc;
-      --text-color: #333;
-      --header-bg: #1e1e2f;
-      --link-color: #0073e6;
-    }
-    body.dark-mode {
-      --bg-color: #121212;
-      --text-color: #f1f1f1;
-      --header-bg: #000000;
-      --link-color: #4db8ff;
+      --bg: #e6f0ff;
+      --primary: #005b96;
+      --secondary: #0074d9;
+      --text: #0a1f44;
+      --card: #ffffff;
+      --shadow: rgba(0, 0, 0, 0.1);
     }
     body {
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
       margin: 0;
-      padding: 0;
-      background: var(--bg-color);
-      color: var(--text-color);
-      transition: background 0.3s, color 0.3s;
-    }
-    .container {
-      max-width: 1000px;
-      margin: auto;
-      padding: 20px;
+      font-family: 'Poppins', sans-serif;
+      background: var(--bg);
+      color: var(--text);
     }
     header {
-      background: var(--header-bg);
-      color: #fff;
-      padding: 40px 20px;
-      text-align: center;
-    }
-    header img {
-      width: 150px;
-      border-radius: 100px;
-      margin-bottom: 20px;
-    }
-    h1, h2, h3 {
-      color: var(--text-color);
-    }
-    section {
-      margin-bottom: 40px;
-    }
-    ul {
-      padding-left: 20px;
-    }
-    .project, .internship {
-      margin-bottom: 15px;
-    }
-    footer {
-      text-align: center;
+      background: var(--primary);
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
       padding: 20px;
-      background: var(--header-bg);
-      color: #fff;
+      flex-wrap: wrap;
     }
-    a {
-      color: var(--link-color);
+    header h1 { font-size: 24px; }
+    nav a {
+      color: white;
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: 500;
     }
-    .theme-toggle {
-      position: fixed;
-      top: 20px;
-      right: 20px;
-      background: var(--link-color);
-      color: #fff;
-      border: none;
-      padding: 10px 15px;
+    .profile {
+      text-align: center;
+      padding: 40px 20px;
+    }
+    .profile img {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      border: 4px solid var(--secondary);
+      object-fit: cover;
+    }
+
+
+    .profile h2 {
+      font-size: 26px;
+      margin: 15px 0 5px;
+    }
+    .profile p {
+      color: #334e68;
+      font-size: 16px;
+    }
+    .download-resume {
+      margin-top: 15px;
+    }
+    .download-resume a {
+      background: var(--secondary);
+      color: white;
+      padding: 10px 20px;
       border-radius: 5px;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .section {
+      max-width: 960px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+    .card {
+      background: var(--card);
+      border-radius: 10px;
+      padding: 25px;
+      margin-top: 20px;
+      box-shadow: 0 4px 10px var(--shadow);
+    }
+    h2 {
+      color: var(--primary);
+      margin-bottom: 10px;
+    }
+    .skills-block strong {
+      display: block;
+      margin-top: 10px;
+    }
+    .project {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+    .project p { flex: 1; }
+    .github-link {
+      text-align: right;
+      font-size: 14px;
+      color: var(--secondary);
+      flex: 0 0 180px;
+      margin-top: 10px;
+    }
+    form input, form textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+    form button {
+      background: var(--secondary);
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 6px;
+      font-weight: 500;
       cursor: pointer;
-      z-index: 1000;
     }
   </style>
 </head>
 <body>
-  <button class="theme-toggle" onclick="toggleTheme()">Toggle Theme</button>
-  <header>
-    <img src="Teja Pass port Size Pic.jpg" alt="Y Surya Teja Photo">
-    <h1>YERRAGUNTLA SURYA TEJA</h1>
-    <p>DevOps Engineer & Python Full Stack Web Developer</p>
+
+ <header>
+    <h1>Yerraguntla Surya Teja</h1>
+    <nav>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#experience">Experience</a>
+      <a href="#certifications">Certifications</a>
+      <a href="#achievements">Achievements</a>
+      <a href="#contact">Contact</a>
+    
+    </nav>
   </header>
-  
-  <div class="container">
-    <section id="about">
-      <h2>About Me</h2>
-      <p>I am Y Surya Teja from Hyderabad. I’m a passionate DevOps & Cloud AWS Engineer specialized in automation, cloud platforms (AWS), CI/CD, and containerization. With hands-on experience in Full-stack web development and real-world projects, I bring a strong foundation in Linux, Docker, Kubernetes, and Python to deploy scalable tech solutions.</p>
-    </section>
 
-    <section id="skills">
-      <h2>Skills</h2>
+  <section class="profile">
+    <img src="IMG20250709162518.jpg" alt="Profile Image">
+    <h2>Python Web Developer & DevOps Engineer</h2>
+    <p>A passionate Python Full stack Developer & DevOps enthusiast with experience in building web applications and implementing CI/CD pipelines.</p>
+    <div class="download-resume">
+      <a href="C:\Users\Y SURYA TEJA\Desktop\Resumes\Surya_Python developer_fresher.pdf" download>📄 View Resume</a>
+    </div>
+  </section>
+
+  <section id="skills" class="section">
+    <h2>Skills</h2>
+    <div class="card skills-block">
+      <strong>Languages:</strong>
+      Python, JavaScript, Linux Bash scripting
+      <strong>Full stack:</strong>
+      Django, HTML, CSS
+      <strong>DevOps:</strong>
+      Docker, Jenkins, CI/CD Pipelines, Terraform
+      <strong>Technologies:</strong>
+      Linux, Git, GitHub, AWS (EC2, S3, IAM), MySQL
+    </div>
+  </section>
+
+  <section id="experience" class="section">
+    <h2>Experience</h2>
+    <div class="card">
+     <p>
+        <strong>Python Full Stack Development Intern – Fratello Info tech</strong><br>
+          •  Built a web application that combines e-commerce shopping and social media features for users.<br>
+          •  Developed vendor modules for 10+ sellers to manage 100+ products. <br>
+          •  Designed features for 50+ customers to browse products, shop online, add friends, and view posts.
+        .<br>
+          
+       </p>
+      <p>  <strong>IT support associate Intern – VXI Global Solutions</strong><br>
+          •  Handled 30+ customer queries daily, providing timely resolutions and maintaining a 90%+ satisfaction rate.<br>
+          •  Gained exposure to IT support systems and troubleshooting processes including network issues and service request escalation.
+        
+      </p>
+    </div>
+  </section>
+
+  <section id="projects" class="section">
+    <h2>Projects</h2>
+    <div class="card project">
+      <p>
+        <strong>🛒 Connecting Social Media to E-Commerce Website</strong><br>
+        • Developed a full-stack platform integrating multi-vendor e-commerce with real-time chat and post features.<br>
+        • Technologies Used: HTML, CSS, JavaScript, Node.js, Express.js, Django.
+      </p>
+      <div class="github-link">🔗 GitHub link </div>
+    </div>
+    <div class="card project">
+      <p>
+        <strong>⚙️ Corporate CI/CD Pipeline Deployment on EC2</strong><br>
+        • Automated build and deployment using Jenkins, Docker, and GitHub Actions deployed to AWS EC2 instance.<br>
+        • Technologies Used: Jenkins, GitHub, Docker, AWS, Shell scripting.
+      </p>
+      <div class="github-link">🔗 GitHub link</div>
+    </div>
+  </section>
+
+  <section id="certifications" class="section">
+    <h2>Certifications</h2>
+    <div class="card">
       <ul>
-        <li><strong>Languages:</strong> Python, Linux Shell Scripting, JavaScript</li>
-        <li><strong>Web Development:</strong> Node.js, React.js, Express.js, HTML, CSS</li>
-        <li><strong>DevOps Tools:</strong> Docker, Jenkins, CI/CD Pipelines, Terraform</li>
-        <li><strong>Cloud Platforms:</strong> AWS</li>
-        <li><strong>Version Control:</strong> Git, GitHub</li>
-        <li><strong>Databases:</strong> MySQL</li>
-      </ul>
-    </section>
-
-    <section id="projects">
-      <h2>Projects</h2>
-      <div class="project">
-        <h3>Connecting Social Media to E-commerce</h3>
-        <p>Built a web app combining social media and e-commerce where users can chat, post updates, shop, and share products. Developed admin/vendor features and handled full-stack logic using Python, Node.js, Express, HTML, CSS, JavaScript, and SQL.</p>
-      </div>
-      <div class="project">
-        <h3>The Ultimate CI/CD Corporate DevOps Pipeline</h3>
-        <p>Designed a fully automated CI/CD pipeline using Git, Jenkins, Docker, Kubernetes, and AWS. Built infrastructure with Terraform and automated tasks in Linux.</p>
-      </div>
-    </section>
-
-    <section id="experience">
-      <h2>Experience</h2>
-      <div class="internship">
-        <h3>Prodigy InfoTech – Full Stack Web Developer Intern</h3>
-        <p>Developed a real-time chat app using Node.js, Express, and Socket.io. Implemented WebSocket communication for seamless multi-client support.</p>
-      </div>
-      <div class="internship">
-        <h3>VXI Global Solutions – Account Associate Intern</h3>
-        <p>Handled customer queries and IT support issues, gaining exposure to real-time troubleshooting and tech systems.</p>
-      </div>
-    </section>
-
-    <section id="certifications">
-      <h2>Certifications</h2>
-      <ul>
-        <li>DevOps Tools – IBM</li>
-        <li>AWS Services – Amazon (Coursera)</li>
-        <li>Web Development Full Stack – Udemy</li>
+        <li>DevOps Tools – IBM (Coursera)</li>
+        <li>AWS Cloud Practitioner – AWS </li>
+        <li>Web Development – IBM SkillsBuild</li>
+         <li>Advance Excel – Microsoft</li>
         <li>Python Programming – Besant Technologies</li>
-        <li>Full Stack Web Development – IBM SkillsBuild & Coursera</li>
       </ul>
-    </section>
+    </div>
+  </section>
 
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>Email: <a href="mailto:Suryayst.20@gmail.com">Suryayst.20@gmail.com</a></p>
-      <p>Phone: +91-8331026366</p>
-      <p>GitHub: <a href="https://github.com/surya00-yst" target="_blank">github.com/surya00-yst</a></p>
-      <p>LinkedIn: <a href="https://www.linkedin.com/in/surya-teja-yerraguntla-0191102b2/" target="_blank">linkedin.com/in/surya-teja-yerraguntla</a></p>
-    </section>
-  </div>
+  <section id="achievements" class="section">
+    <h2>Achievements</h2>
+    <div class="card">
+      <ul>
+        <p>🚀 Achieved 1st Prize in "Code Craft", Programming Contest focussing on logic and programming skils</p>
+        <p>💡 Organized “Code Breaker” during a techno-cultural event for 50+ participants</p>
+        <p>✅ Recognised as the Top performer of the week at VXI Global Solutions</p>
+      </ul>
+    </div>
+  </section>
 
-  <footer>
-    <p>&copy; 2025 YERRAGUNTLA SURYA TEJA</p>
-  </footer>
+  <section id="contact" class="section">
+    <h2>Contact Me</h2>
+    <div class="card">
+      <div style="display:flex; flex-wrap: wrap; justify-content: space-between;">
+        <div style="flex: 1; min-width: 280px; padding-right: 20px;">
+          <p><strong>📧 Email:</strong> <a href="mailto:suryayst.20@gmail.com">suryayst.20@gmail.com</a></p>
+          <p><strong>📞 Phone:</strong> +91-8331026366</p>
+          <p><strong>📍 Location:</strong> Hyderabad, India</p>
+        </div>
+        <div style="flex: 1; min-width: 280px;">
+          <form action="#" method="POST">
+            <input type="text" placeholder="Name" required>
+            <input type="email" placeholder="Email" required>
+            <input type="text" placeholder="Subject" required>
+            <textarea rows="4" placeholder="Message" required></textarea>
+            <button type="submit">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <script>
-    function toggleTheme() {
-      document.body.classList.toggle("dark-mode");
-    }
-  </script>
 </body>
 </html>
+
+
